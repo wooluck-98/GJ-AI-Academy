@@ -1,0 +1,13 @@
+--GNP가 높은 나라들 중 영어권 나라가 많은데, 그럼 영어를 쓰는 나라들은 다 GNP가 높을까?
+select distinct name as '이름', GNP as '국민총생산', language as '언어'
+from country join countrylanguage 
+where language like 'English'
+order by GNP desc;
+
+--영어를 쓰는 나라라고 다 GNP가 높은것은 아니다.
+
+SELECT NAME,GNP FROM country ORDER BY GNP DESC;
+SELECT AVG(GNP) FROM country;
+ 
+select distinct name as '이름', GNP as '국민총생산', language as '언어' 
+from country join countrylanguage where language like 'English' order by GNP desc;
